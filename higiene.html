@@ -4,93 +4,138 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Higiene — PataFeliz Petshop</title>
+  <meta name="description" content="Produtos de higiene para cães e gatos no PataFeliz Petshop">
+
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@600;700&family=Open+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.2/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.11.3/font/bootstrap-icons.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-  <!-- CABEÇALHO -->
-  <header>
-    <h1>🐾 PataFeliz Petshop</h1>
-    <p>Tudo o que seu pet precisa, com amor e cuidado!</p>
-    <nav>
-      <a href="index.html">Início</a> |
-      <a href="alimentos.html">Alimentos</a> |
-      <a href="acessorios.html">Acessórios</a> |
-      <a href="higiene.html">Higiene</a> |
-      <a href="servicos.html">Serviços</a>
-    </nav>
-    <hr>
-  </header>
+  <a href="#conteudo-principal" class="skip-link">Pular para o conteúdo principal</a>
 
-  <!-- CORPO -->
-  <main>
-    <h2>🛁 Higiene para Pets</h2>
-    <p>Mantenha seu pet limpo, cheiroso e saudável com nossos produtos de higiene.</p>
+  <!-- ===== NAVBAR ===== -->
+  <nav class="navbar navbar-expand-lg navbar-pata sticky-top" role="navigation" aria-label="Menu principal">
+    <div class="container">
+      <a class="navbar-brand" href="index.html" aria-label="PataFeliz Petshop — página inicial">🐾 PataFeliz</a>
+      <span id="relogio" aria-live="off" aria-label="Relógio"></span>
 
-    <hr>
+      <button class="navbar-toggler ms-auto me-2" type="button"
+              data-bs-toggle="collapse" data-bs-target="#navMenu"
+              aria-controls="navMenu" aria-expanded="false"
+              aria-label="Abrir ou fechar menu de navegação">
+        <span class="navbar-toggler-icon"></span>
+      </button>
 
-    <!-- Produto 1 -->
-    <section>
-      <h3>Shampoo Antipulgas para Cães — PetClean 500ml</h3>
-      <img
-        src="https://images.unsplash.com/photo-1583511655826-05700d52f4d9?w=300&h=200&fit=crop"
-        alt="Cão sendo banhado com shampoo antipulgas"
-        width="300"
-        height="200"
-      >
-      <p>
-        <strong>Descrição:</strong> Shampoo antipulgas e carrapatos com fórmula suave à base de citronela e óleos
-        naturais. Ideal para uso frequente, não resseca a pele e garante pelagem macia e perfumada.
-        Rende até 20 banhos em cães de porte médio. Volume: 500 ml. Indicado a partir de 3 meses de vida.
-      </p>
-      <p><strong>Categoria:</strong> Higiene — Banho</p>
-      <p><strong>Valor:</strong> R$ 32,90</p>
-    </section>
+      <div class="collapse navbar-collapse" id="navMenu">
+        <ul class="navbar-nav ms-auto gap-1">
+          <li class="nav-item"><a class="nav-link" href="index.html"><i class="bi bi-house-fill me-1" aria-hidden="true"></i>Início</a></li>
+          <li class="nav-item"><a class="nav-link" href="alimentos.html"><i class="bi bi-bag-fill me-1" aria-hidden="true"></i>Alimentos</a></li>
+          <li class="nav-item"><a class="nav-link" href="acessorios.html"><i class="bi bi-stars me-1" aria-hidden="true"></i>Acessórios</a></li>
+          <li class="nav-item"><a class="nav-link active" aria-current="page" href="higiene.html"><i class="bi bi-droplet-fill me-1" aria-hidden="true"></i>Higiene</a></li>
+          <li class="nav-item"><a class="nav-link" href="servicos.html"><i class="bi bi-scissors me-1" aria-hidden="true"></i>Serviços</a></li>
+          <li class="nav-item"><a class="nav-link" href="cadastro.html"><i class="bi bi-calendar-check-fill me-1" aria-hidden="true"></i>Agendar</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
 
-    <hr>
+  <!-- ===== CONTEÚDO PRINCIPAL ===== -->
+  <main id="conteudo-principal" class="container py-5">
+    <h1 class="section-title">🛁 Higiene para Pets</h1>
+    <p class="section-subtitle">Mantenha seu pet limpo, cheiroso e saudável com nossos produtos de higiene.</p>
 
-    <!-- Produto 2 -->
-    <section>
-      <h3>Escova Removedora de Pelos para Gatos — FurPro</h3>
-      <img
-        src="https://images.unsplash.com/photo-1574158622682-e40e69881006?w=300&h=200&fit=crop"
-        alt="Gato sendo escovado com escova azul removedora de pelos"
-        width="300"
-        height="200"
-      >
-      <p>
-        <strong>Descrição:</strong> Escova com dentes de aço inoxidável de dupla face: um lado para remoção
-        de pelos soltos e o outro para massagem e distribuição dos óleos naturais da pelagem.
-        Cabo ergonômico antiderrapante. Indicada para gatos de pelo curto, médio e longo.
-        Botão de limpeza automática das cerdas.
-      </p>
-      <p><strong>Categoria:</strong> Higiene — Grooming</p>
-      <p><strong>Valor:</strong> R$ 48,50</p>
-    </section>
+    <div class="row g-4">
 
-    <hr>
+      <!-- Produto 1 -->
+      <div class="col-md-6">
+        <article class="card card-produto" aria-label="Produto: Shampoo Antipulgas PetClean 500ml">
+          <img src="https://images.unsplash.com/photo-1583511655826-05700d52f4d9?w=600&h=400&fit=crop"
+               alt="Cão sendo banhado com espuma de shampoo antipulgas durante o banho"
+               loading="lazy">
+          <div class="card-body">
+            <span class="badge-categoria mb-2 d-inline-block">Higiene — Banho</span>
+            <h2 class="card-title">Shampoo Antipulgas para Cães — PetClean 500ml</h2>
+            <p class="card-text text-muted">
+              Shampoo antipulgas e carrapatos com fórmula suave à base de citronela
+              e óleos naturais. Ideal para uso frequente, não resseca a pele e
+              garante pelagem macia e perfumada. Rende até 20 banhos em cães de
+              porte médio. Volume: 500 ml. Indicado a partir de 3 meses de vida.
+            </p>
+            <p class="preco mb-0">R$ 32,90</p>
+          </div>
+        </article>
+      </div>
 
-    <p><a href="index.html">← Voltar ao início</a></p>
+      <!-- Produto 2 -->
+      <div class="col-md-6">
+        <article class="card card-produto" aria-label="Produto: Escova Removedora de Pelos FurPro">
+          <img src="https://images.unsplash.com/photo-1574158622682-e40e69881006?w=600&h=400&fit=crop"
+               alt="Gato sendo escovado com escova azul removedora de pelos da marca FurPro"
+               loading="lazy">
+          <div class="card-body">
+            <span class="badge-categoria mb-2 d-inline-block">Higiene — Grooming</span>
+            <h2 class="card-title">Escova Removedora de Pelos para Gatos — FurPro</h2>
+            <p class="card-text text-muted">
+              Escova com dentes de aço inoxidável de dupla face: um lado para
+              remoção de pelos soltos e o outro para massagem e distribuição dos
+              óleos naturais da pelagem. Cabo ergonômico antiderrapante. Indicada
+              para gatos de pelo curto, médio e longo. Botão de limpeza automática
+              das cerdas.
+            </p>
+            <p class="preco mb-0">R$ 48,50</p>
+          </div>
+        </article>
+      </div>
+
+    </div>
+
+    <div class="text-center mt-5">
+      <a href="index.html" class="btn btn-outline-success">
+        <i class="bi bi-arrow-left me-1" aria-hidden="true"></i>Voltar ao início
+      </a>
+      <a href="cadastro.html" class="btn btn-pata-primary">
+        <i class="bi bi-calendar-check me-1" aria-hidden="true"></i>Agendar serviço
+      </a>
+    </div>
   </main>
 
-  <!-- RODAPÉ -->
-  <footer>
-    <hr>
-    <p>
-      <strong>PataFeliz Petshop</strong> &copy; 2025 — Todos os direitos reservados.
-    </p>
-    <p>
-      Rua dos Animais, 123 — Cachoeirinha/RS — CEP 94900-000<br>
-      Telefone: (51) 99999-0000 | E-mail: contato@patafeliz.com.br
-    </p>
-    <nav>
-      <a href="index.html">Início</a> |
-      <a href="alimentos.html">Alimentos</a> |
-      <a href="acessorios.html">Acessórios</a> |
-      <a href="higiene.html">Higiene</a> |
-      <a href="servicos.html">Serviços</a>
-    </nav>
-    <p><small>Desenvolvido como projeto acadêmico — Disciplina de Desenvolvimento Web</small></p>
+  <!-- ===== RODAPÉ ===== -->
+  <footer role="contentinfo">
+    <div class="container">
+      <div class="row g-4">
+        <div class="col-md-4">
+          <h5>🐾 PataFeliz Petshop</h5>
+          <p>Cuidando do seu pet com amor, desde 2020.</p>
+        </div>
+        <div class="col-md-4">
+          <h5>Navegação</h5>
+          <nav aria-label="Links do rodapé">
+            <a href="index.html">Início</a>
+            <a href="alimentos.html">Alimentos</a>
+            <a href="acessorios.html">Acessórios</a>
+            <a href="higiene.html">Higiene</a>
+            <a href="servicos.html">Serviços</a>
+            <a href="cadastro.html">Agendar</a>
+          </nav>
+        </div>
+        <div class="col-md-4">
+          <h5>Contato</h5>
+          <address>
+            <p><i class="bi bi-geo-alt-fill me-1" aria-hidden="true"></i>Rua dos Animais, 123 — Cachoeirinha/RS</p>
+            <p><i class="bi bi-telephone-fill me-1" aria-hidden="true"></i>(51) 99999-0000</p>
+            <p><i class="bi bi-envelope-fill me-1" aria-hidden="true"></i>contato@patafeliz.com.br</p>
+          </address>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2025 PataFeliz Petshop — Todos os direitos reservados. | Projeto acadêmico — Fundamentos de Sistemas Web</p>
+      </div>
+    </div>
   </footer>
 
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.2/js/bootstrap.bundle.min.js"></script>
+  <script src="script.js"></script>
 </body>
 </html>

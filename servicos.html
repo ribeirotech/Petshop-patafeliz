@@ -4,140 +4,157 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Serviços — PataFeliz Petshop</title>
+  <meta name="description" content="Serviços de banho, tosa e mais no PataFeliz Petshop, com opção de tele-busca">
+
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@600;700&family=Open+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.2/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.11.3/font/bootstrap-icons.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-  <!-- CABEÇALHO -->
-  <header>
-    <h1>🐾 PataFeliz Petshop</h1>
-    <p>Tudo o que seu pet precisa, com amor e cuidado!</p>
-    <nav>
-      <a href="index.html">Início</a> |
-      <a href="alimentos.html">Alimentos</a> |
-      <a href="acessorios.html">Acessórios</a> |
-      <a href="higiene.html">Higiene</a> |
-      <a href="servicos.html">Serviços</a>
-    </nav>
-    <hr>
-  </header>
+  <a href="#conteudo-principal" class="skip-link">Pular para o conteúdo principal</a>
 
-  <!-- CORPO -->
-  <main>
-    <h2>✂️ Serviços PataFeliz</h2>
-    <p>Cuidamos do seu pet com profissionalismo e carinho. Confira nossos serviços disponíveis:</p>
+  <!-- ===== NAVBAR ===== -->
+  <nav class="navbar navbar-expand-lg navbar-pata sticky-top" role="navigation" aria-label="Menu principal">
+    <div class="container">
+      <a class="navbar-brand" href="index.html" aria-label="PataFeliz Petshop — página inicial">🐾 PataFeliz</a>
+      <span id="relogio" aria-live="off" aria-label="Relógio"></span>
 
-    <hr>
+      <button class="navbar-toggler ms-auto me-2" type="button"
+              data-bs-toggle="collapse" data-bs-target="#navMenu"
+              aria-controls="navMenu" aria-expanded="false"
+              aria-label="Abrir ou fechar menu de navegação">
+        <span class="navbar-toggler-icon"></span>
+      </button>
 
-    <table border="1" cellpadding="10" cellspacing="0">
-      <thead>
-        <tr>
-          <th>Serviço</th>
-          <th>Descrição</th>
-          <th>Valor</th>
-          <th>Tele-busca disponível?</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr>
-          <td><strong>Banho Simples</strong></td>
-          <td>
-            Banho completo com shampoo adequado ao porte e tipo de pelagem do pet,
-            secagem com soprador e escovação básica.
-          </td>
-          <td>A partir de R$ 60,00</td>
-          <td>Sim</td>
-        </tr>
-        <tr>
-          <td><strong>Banho e Tosa</strong></td>
-          <td>
-            Banho completo + tosa higiênica ou tosa na raça, conforme solicitação do tutor.
-            Inclui limpeza de ouvidos e corte de unhas.
-          </td>
-          <td>A partir de R$ 90,00</td>
-          <td>Sim</td>
-        </tr>
-        <tr>
-          <td><strong>Tosa Higiênica</strong></td>
-          <td>
-            Corte apenas nas regiões de higiene: patinhas, virilha, região anal e focinho.
-            Ideal para manutenção entre as tosas completas.
-          </td>
-          <td>R$ 40,00</td>
-          <td>Não</td>
-        </tr>
-        <tr>
-          <td><strong>Consulta Veterinária</strong></td>
-          <td>
-            Atendimento clínico geral com médico veterinário. Avaliação de saúde, vacinação,
-            vermifugação e orientações para o tutor.
-          </td>
-          <td>R$ 120,00</td>
-          <td>Não</td>
-        </tr>
-        <tr>
-          <td><strong>Hidratação de Pelagem</strong></td>
-          <td>
-            Tratamento intensivo com máscara hidratante específica para o tipo de pelo do pet.
-            Deixa a pelagem macia, brilhante e com menos queda de pelos.
-          </td>
-          <td>R$ 50,00</td>
-          <td>Sim</td>
-        </tr>
-        <tr>
-          <td><strong>Adestramento Básico</strong></td>
-          <td>
-            Sessão de adestramento com profissional certificado. Foco em comandos básicos:
-            sentar, ficar, vir, não pular. Pacote de 4 sessões disponível com desconto.
-          </td>
-          <td>R$ 80,00 / sessão</td>
-          <td>Não</td>
-        </tr>
-        <tr>
-          <td><strong>Tele-busca (Busca e Retorno)</strong></td>
-          <td>
-            Buscamos o seu pet no endereço indicado e devolvemos após o serviço realizado.
-            Veículo adaptado e motorista treinado para o transporte seguro dos animais.
-          </td>
-          <td>A partir de R$ 30,00</td>
-          <td>—</td>
-        </tr>
-      </tbody>
-    </table>
+      <div class="collapse navbar-collapse" id="navMenu">
+        <ul class="navbar-nav ms-auto gap-1">
+          <li class="nav-item"><a class="nav-link" href="index.html"><i class="bi bi-house-fill me-1" aria-hidden="true"></i>Início</a></li>
+          <li class="nav-item"><a class="nav-link" href="alimentos.html"><i class="bi bi-bag-fill me-1" aria-hidden="true"></i>Alimentos</a></li>
+          <li class="nav-item"><a class="nav-link" href="acessorios.html"><i class="bi bi-stars me-1" aria-hidden="true"></i>Acessórios</a></li>
+          <li class="nav-item"><a class="nav-link" href="higiene.html"><i class="bi bi-droplet-fill me-1" aria-hidden="true"></i>Higiene</a></li>
+          <li class="nav-item"><a class="nav-link active" aria-current="page" href="servicos.html"><i class="bi bi-scissors me-1" aria-hidden="true"></i>Serviços</a></li>
+          <li class="nav-item"><a class="nav-link" href="cadastro.html"><i class="bi bi-calendar-check-fill me-1" aria-hidden="true"></i>Agendar</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
 
-    <br>
-    <p>
+  <!-- ===== CONTEÚDO PRINCIPAL ===== -->
+  <main id="conteudo-principal" class="container py-5">
+    <h1 class="section-title">✂️ Serviços PataFeliz</h1>
+    <p class="section-subtitle">Cuidamos do seu pet com profissionalismo e carinho. Confira nossos serviços disponíveis:</p>
+
+    <div class="table-responsive">
+      <table class="table table-bordered table-hover align-middle tabela-servicos">
+        <caption class="visually-hidden">Tabela com os serviços oferecidos, descrição, valor e disponibilidade de tele-busca</caption>
+        <thead>
+          <tr>
+            <th scope="col">Serviço</th>
+            <th scope="col">Descrição</th>
+            <th scope="col">Valor</th>
+            <th scope="col">Tele-busca?</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <th scope="row">Banho Simples</th>
+            <td>Banho completo com shampoo adequado ao porte e tipo de pelagem do pet, secagem com soprador e escovação básica.</td>
+            <td>A partir de R$ 60,00</td>
+            <td><span class="badge-sim">Sim</span></td>
+          </tr>
+          <tr>
+            <th scope="row">Banho e Tosa</th>
+            <td>Banho completo + tosa higiênica ou tosa na raça, conforme solicitação do tutor. Inclui limpeza de ouvidos e corte de unhas.</td>
+            <td>A partir de R$ 90,00</td>
+            <td><span class="badge-sim">Sim</span></td>
+          </tr>
+          <tr>
+            <th scope="row">Tosa Higiênica</th>
+            <td>Corte apenas nas regiões de higiene: patinhas, virilha, região anal e focinho. Ideal para manutenção entre as tosas completas.</td>
+            <td>R$ 40,00</td>
+            <td><span class="badge-nao">Não</span></td>
+          </tr>
+          <tr>
+            <th scope="row">Consulta Veterinária</th>
+            <td>Atendimento clínico geral com médico veterinário. Avaliação de saúde, vacinação, vermifugação e orientações para o tutor.</td>
+            <td>R$ 120,00</td>
+            <td><span class="badge-nao">Não</span></td>
+          </tr>
+          <tr>
+            <th scope="row">Hidratação de Pelagem</th>
+            <td>Tratamento intensivo com máscara hidratante específica para o tipo de pelo do pet. Deixa a pelagem macia, brilhante e com menos queda de pelos.</td>
+            <td>R$ 50,00</td>
+            <td><span class="badge-sim">Sim</span></td>
+          </tr>
+          <tr>
+            <th scope="row">Adestramento Básico</th>
+            <td>Sessão de adestramento com profissional certificado. Foco em comandos básicos: sentar, ficar, vir, não pular. Pacote de 4 sessões disponível com desconto.</td>
+            <td>R$ 80,00 / sessão</td>
+            <td><span class="badge-nao">Não</span></td>
+          </tr>
+          <tr>
+            <th scope="row">Tele-busca (Busca e Retorno)</th>
+            <td>Buscamos o seu pet no endereço indicado e devolvemos após o serviço realizado. Veículo adaptado e motorista treinado para o transporte seguro dos animais.</td>
+            <td>A partir de R$ 30,00</td>
+            <td><span class="badge-sim">Opcional</span></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="alert alert-success mt-4" role="note">
+      <i class="bi bi-info-circle-fill me-2" aria-hidden="true"></i>
       <strong>Observação:</strong> O serviço de tele-busca está disponível em um raio de até 10 km
-      do petshop. Entre em contato para confirmar disponibilidade na sua região.
-    </p>
-    <p>
-      📞 Agende seu horário pelo telefone <strong>(51) 99999-0000</strong> ou pelo
-      e-mail <strong>contato@patafeliz.com.br</strong>.
-    </p>
+      do petshop. <strong>Agende online pelo nosso formulário de cadastro!</strong>
+    </div>
 
-    <hr>
-
-    <p><a href="index.html">← Voltar ao início</a></p>
+    <div class="text-center mt-4">
+      <a href="index.html" class="btn btn-outline-success">
+        <i class="bi bi-arrow-left me-1" aria-hidden="true"></i>Voltar ao início
+      </a>
+      <a href="cadastro.html" class="btn btn-pata-primary">
+        <i class="bi bi-calendar-check me-1" aria-hidden="true"></i>Agendar agora
+      </a>
+    </div>
   </main>
 
-  <!-- RODAPÉ -->
-  <footer>
-    <hr>
-    <p>
-      <strong>PataFeliz Petshop</strong> &copy; 2025 — Todos os direitos reservados.
-    </p>
-    <p>
-      Rua dos Animais, 123 — Cachoeirinha/RS — CEP 94900-000<br>
-      Telefone: (51) 99999-0000 | E-mail: contato@patafeliz.com.br
-    </p>
-    <nav>
-      <a href="index.html">Início</a> |
-      <a href="alimentos.html">Alimentos</a> |
-      <a href="acessorios.html">Acessórios</a> |
-      <a href="higiene.html">Higiene</a> |
-      <a href="servicos.html">Serviços</a>
-    </nav>
-    <p><small>Desenvolvido como projeto acadêmico — Disciplina de Desenvolvimento Web</small></p>
+  <!-- ===== RODAPÉ ===== -->
+  <footer role="contentinfo">
+    <div class="container">
+      <div class="row g-4">
+        <div class="col-md-4">
+          <h5>🐾 PataFeliz Petshop</h5>
+          <p>Cuidando do seu pet com amor, desde 2020.</p>
+        </div>
+        <div class="col-md-4">
+          <h5>Navegação</h5>
+          <nav aria-label="Links do rodapé">
+            <a href="index.html">Início</a>
+            <a href="alimentos.html">Alimentos</a>
+            <a href="acessorios.html">Acessórios</a>
+            <a href="higiene.html">Higiene</a>
+            <a href="servicos.html">Serviços</a>
+            <a href="cadastro.html">Agendar</a>
+          </nav>
+        </div>
+        <div class="col-md-4">
+          <h5>Contato</h5>
+          <address>
+            <p><i class="bi bi-geo-alt-fill me-1" aria-hidden="true"></i>Rua dos Animais, 123 — Cachoeirinha/RS</p>
+            <p><i class="bi bi-telephone-fill me-1" aria-hidden="true"></i>(51) 99999-0000</p>
+            <p><i class="bi bi-envelope-fill me-1" aria-hidden="true"></i>contato@patafeliz.com.br</p>
+          </address>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2025 PataFeliz Petshop — Todos os direitos reservados. | Projeto acadêmico — Fundamentos de Sistemas Web</p>
+      </div>
+    </div>
   </footer>
 
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.2/js/bootstrap.bundle.min.js"></script>
+  <script src="script.js"></script>
 </body>
 </html>

@@ -1,0 +1,322 @@
+/* ============================================
+   PataFeliz Petshop — Estilos Globais
+   Fase 2 — CSS customizado + Bootstrap
+   ============================================ */
+
+/* --- Variáveis de cor e fonte --- */
+:root {
+  --cor-primaria: #2e7d32;      /* verde escuro */
+  --cor-secundaria: #ff8f00;    /* âmbar */
+  --cor-fundo: #f9fbe7;         /* verde clarissimo */
+  --cor-texto: #212121;
+  --cor-branco: #ffffff;
+  --cor-cinza-claro: #f5f5f5;
+  --fonte-titulo: 'Poppins', sans-serif;
+  --fonte-corpo: 'Open Sans', sans-serif;
+}
+
+/* --- Reset e base --- */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: var(--fonte-corpo);
+  background-color: var(--cor-fundo);
+  color: var(--cor-texto);
+  line-height: 1.7;
+}
+
+/* --- Cabeçalho / Navbar --- */
+.navbar-pata {
+  background-color: var(--cor-primaria);
+}
+
+.navbar-pata .navbar-brand {
+  font-family: var(--fonte-titulo);
+  font-size: 1.6rem;
+  font-weight: 700;
+  color: var(--cor-branco) !important;
+  letter-spacing: 1px;
+}
+
+.navbar-pata .nav-link {
+  color: rgba(255,255,255,0.88) !important;
+  font-weight: 500;
+  transition: color 0.2s;
+}
+
+.navbar-pata .nav-link:hover,
+.navbar-pata .nav-link.active {
+  color: var(--cor-secundaria) !important;
+}
+
+/* --- Hero / Carrossel --- */
+.carousel-caption-custom {
+  background: rgba(0, 0, 0, 0.48);
+  border-radius: 8px;
+  padding: 12px 20px;
+}
+
+.carousel-item img {
+  height: 420px;
+  object-fit: cover;
+  filter: brightness(0.82);
+}
+
+/* --- Seções --- */
+.section-title {
+  font-family: var(--fonte-titulo);
+  font-size: 1.75rem;
+  font-weight: 700;
+  color: var(--cor-primaria);
+  margin-bottom: 0.3rem;
+  position: relative;
+  display: inline-block;
+}
+
+.section-title::after {
+  content: '';
+  display: block;
+  height: 4px;
+  width: 60px;
+  background: var(--cor-secundaria);
+  border-radius: 2px;
+  margin-top: 6px;
+}
+
+.section-subtitle {
+  color: #666;
+  margin-bottom: 2rem;
+  font-size: 0.97rem;
+}
+
+/* --- Cards de produto --- */
+.card-produto {
+  border: none;
+  border-radius: 12px;
+  box-shadow: 0 2px 12px rgba(0,0,0,0.09);
+  transition: transform 0.22s, box-shadow 0.22s;
+  background: var(--cor-branco);
+  height: 100%;
+}
+
+.card-produto:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 24px rgba(46,125,50,0.15);
+}
+
+.card-produto img {
+  border-radius: 12px 12px 0 0;
+  height: 200px;
+  object-fit: cover;
+}
+
+.card-produto .card-body {
+  padding: 1.1rem 1.2rem;
+}
+
+.card-produto .card-title {
+  font-family: var(--fonte-titulo);
+  font-weight: 600;
+  font-size: 1.05rem;
+  color: var(--cor-primaria);
+}
+
+.badge-categoria {
+  background-color: var(--cor-fundo);
+  color: var(--cor-primaria);
+  border: 1px solid var(--cor-primaria);
+  font-size: 0.75rem;
+  font-weight: 600;
+  border-radius: 20px;
+  padding: 3px 10px;
+}
+
+.preco {
+  font-family: var(--fonte-titulo);
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: var(--cor-secundaria);
+}
+
+/* --- Tabela de serviços --- */
+.tabela-servicos th {
+  background-color: var(--cor-primaria);
+  color: var(--cor-branco);
+  font-family: var(--fonte-titulo);
+  font-weight: 600;
+}
+
+.tabela-servicos tbody tr:hover {
+  background-color: #e8f5e9;
+}
+
+.badge-sim {
+  background-color: #2e7d32;
+  color: white;
+  border-radius: 20px;
+  padding: 3px 12px;
+  font-size: 0.82rem;
+}
+
+.badge-nao {
+  background-color: #b71c1c;
+  color: white;
+  border-radius: 20px;
+  padding: 3px 12px;
+  font-size: 0.82rem;
+}
+
+/* --- Formulário --- */
+.form-section {
+  background: var(--cor-branco);
+  border-radius: 16px;
+  box-shadow: 0 2px 16px rgba(0,0,0,0.08);
+  padding: 2rem 2.2rem;
+  margin-bottom: 2rem;
+}
+
+.form-section h3 {
+  font-family: var(--fonte-titulo);
+  font-weight: 700;
+  color: var(--cor-primaria);
+  font-size: 1.2rem;
+  margin-bottom: 1.2rem;
+  padding-bottom: 0.5rem;
+  border-bottom: 2px solid #e8f5e9;
+}
+
+.form-label {
+  font-weight: 600;
+  font-size: 0.9rem;
+  color: #444;
+}
+
+.form-control:focus,
+.form-select:focus {
+  border-color: var(--cor-primaria);
+  box-shadow: 0 0 0 0.2rem rgba(46,125,50,0.18);
+}
+
+.btn-pata-primary {
+  background-color: var(--cor-primaria);
+  border-color: var(--cor-primaria);
+  color: var(--cor-branco);
+  font-family: var(--fonte-titulo);
+  font-weight: 600;
+  padding: 0.6rem 2rem;
+  border-radius: 8px;
+  transition: background-color 0.2s;
+}
+
+.btn-pata-primary:hover {
+  background-color: #1b5e20;
+  border-color: #1b5e20;
+  color: var(--cor-branco);
+}
+
+.btn-pata-secondary {
+  background-color: var(--cor-secundaria);
+  border-color: var(--cor-secundaria);
+  color: var(--cor-branco);
+  font-family: var(--fonte-titulo);
+  font-weight: 600;
+  padding: 0.6rem 2rem;
+  border-radius: 8px;
+}
+
+/* --- Relógio --- */
+#relogio {
+  font-family: var(--fonte-titulo);
+  font-size: 1rem;
+  color: rgba(255,255,255,0.9);
+  letter-spacing: 1px;
+}
+
+/* --- Rodapé --- */
+footer {
+  background-color: #1b5e20;
+  color: rgba(255,255,255,0.85);
+  padding: 2.5rem 0 1rem;
+  font-size: 0.9rem;
+}
+
+footer h5 {
+  font-family: var(--fonte-titulo);
+  color: var(--cor-branco);
+  font-weight: 700;
+  margin-bottom: 0.8rem;
+}
+
+footer a {
+  color: rgba(255,255,255,0.75);
+  text-decoration: none;
+  display: block;
+  margin-bottom: 0.3rem;
+  transition: color 0.2s;
+}
+
+footer a:hover {
+  color: var(--cor-secundaria);
+}
+
+footer .footer-bottom {
+  border-top: 1px solid rgba(255,255,255,0.15);
+  margin-top: 1.5rem;
+  padding-top: 1rem;
+  text-align: center;
+  font-size: 0.82rem;
+  color: rgba(255,255,255,0.6);
+}
+
+/* --- Modal confirmação --- */
+.modal-header {
+  background-color: var(--cor-primaria);
+  color: white;
+}
+
+.modal-header .btn-close {
+  filter: invert(1);
+}
+
+/* --- Acessibilidade: foco visível --- */
+a:focus-visible,
+button:focus-visible,
+input:focus-visible,
+select:focus-visible,
+textarea:focus-visible {
+  outline: 3px solid var(--cor-secundaria);
+  outline-offset: 2px;
+}
+
+/* --- Skip link acessibilidade --- */
+.skip-link {
+  position: absolute;
+  top: -50px;
+  left: 0;
+  background: var(--cor-secundaria);
+  color: #000;
+  padding: 8px 16px;
+  font-weight: 700;
+  z-index: 9999;
+  border-radius: 0 0 8px 0;
+  transition: top 0.2s;
+}
+
+.skip-link:focus {
+  top: 0;
+}
+
+/* --- Responsivo --- */
+@media (max-width: 768px) {
+  .carousel-item img {
+    height: 240px;
+  }
+
+  .form-section {
+    padding: 1.2rem 1rem;
+  }
+}
